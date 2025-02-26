@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="index.html" id="navbar__logo">TSOS</a>
+                <div class="nav__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li><a href="index.html" class="navbar__link">HOME</a></li>
+                    <li><a href="/" class="navbar__link">Wallet</a></li>
+                    <li><a href="order.html" class="navbar__link">OrderNow</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <body>
+            <div class="container">
+                <div class="form-container">
+                    <div id="login-form">
+                        <h2>Login</h2>
+                        <form id="login" onsubmit="return validateLogin()">
+                            <label for="login-email">Email:</label>
+                            <input type="email" id="login-email" required>
+                            <label for="login-password">Password:</label>
+                            <input type="password" id="login-password" required>
+                            <button type="submit">Login</button>
+                        </form>
+                        <p>Don't have an account? <span onclick="toggleForms()">Register</span></p>
+                    </div>
+        
+                    <div id="register-form">
+                        <h2>Register</h2>
+                        <form id="register" onsubmit="return validateRegister()">
+                            <label for="register-email">Email:</label>
+                            <input type="email" id="register-email" required>
+                            <label for="register-password">Password:</label>
+                            <input type="password" id="register-password" required>
+                            <label for="register-confirm-password">Confirm Password:</label>
+                            <input type="password" id="register-confirm-password" required>
+                            <button type="submit">Register</button>
+                        </form>
+                        <p>Already have an account? <span onclick="toggleForms()">Login</span></p>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <script src="web.js"></script>
+</body>
+</html>
